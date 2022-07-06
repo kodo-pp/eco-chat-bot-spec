@@ -25,7 +25,7 @@
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Сортировка отходов}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Переработка отходов}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} О боте}}
-        \withbuttons\lbuttons{\button{\messagewidth}{\textbf{Все статьи}}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Все статьи}}
 
         \lmessage{
             \textbf{Ресурсы}
@@ -59,7 +59,7 @@
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Сортировка отходов}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Переработка отходов}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} О боте}}
-        \withbuttons\lbuttons{\button{\messagewidth}{\textbf{Все статьи}}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Все статьи}}
 
         \lmessage{
             \textbf{Ресурсы}
@@ -94,8 +94,8 @@
             Подразделы и заметки:%
         }
         \withbuttons\lbuttons{
-            \button{0.25\messagewidth}{\textbf{Вверх}}
-            \button{0.65\messagewidth}{\textbf{В главное меню}}
+            \button{0.25\messagewidth}{Вверх}
+            \button{0.65\messagewidth}{В главное меню}
         }
         \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Карта сбора --- ВШЭ}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Карта сбора --- Москва и МО}}
@@ -116,10 +116,10 @@
             Подразделы и заметки:%
         }
         \withbuttons\lbuttons{
-            \button{0.25\messagewidth}{\textbf{Вверх}}
-            \button{0.65\messagewidth}{\textbf{В главное меню}}
+            \button{0.25\messagewidth}{Вверх}
+            \button{0.65\messagewidth}{В главное меню}
         }
-        \withbuttons\lbuttons{\button{\messagewidth}{\textbf{Редактировать этот раздел}}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Редактировать этот раздел}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Карта сбора --- ВШЭ}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Карта сбора --- Москва и МО}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Инструкция по сортировке}}
@@ -139,14 +139,14 @@
             Подразделы и заметки (показаны 50--59 из 100):%
         }
         \withbuttons\lbuttons{
-            \button{0.25\messagewidth}{\textbf{Вверх}}
-            \button{0.65\messagewidth}{\textbf{В главное меню}}
+            \button{0.25\messagewidth}{Вверх}
+            \button{0.65\messagewidth}{В главное меню}
         }
         \withbuttons\lbuttons{
-            \button{1em}{\(\ll\)}
-            \button{1em}{\(<\)}
-            \button{1em}{\(>\)}
-            \button{1em}{\(\gg\)}
+            \button{1em}{$\ll$}
+            \button{1em}{$<$}
+            \button{1em}{$>$}
+            \button{1em}{$\gg$}
         }
         \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 50}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 51}}
@@ -164,37 +164,6 @@
     \caption{Интерфейс навигации по разделу базы знаний с разбиением выдачи на страницы.}
 \end{myfigure}
 
-\begin{myfigure}[h!]{fig:sketch:kb-note-for-editors}
-    \messages{0.8\linewidth}{
-        \lmessage{
-            \textbf{Тестовая заметка}
-
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.%
-        }
-        \withbuttons\lbuttons{
-            \button{\messagewidth}{\textbf{Редактировать}}
-        }
-        \withbuttons\lbuttons{
-            \button{\messagewidth}{\textbf{Переименовать}}
-        }
-        \withbuttons\lbuttons{
-            \button{\messagewidth}{\textbf{Переместить в другой раздел}}
-        }
-        \withbuttons\lbuttons{
-            \button{\messagewidth}{\textbf{Удалить}}
-        }
-        \withbuttons\lbuttons{
-            \button{0.25\messagewidth}{\textbf{Назад}}
-            \button{0.65\messagewidth}{\textbf{В главное меню}}
-        }
-
-        {}
-    }
-    \caption{Интерфейс просмотра заметки для пользователей, имеющих право на её редактирование.}
-\end{myfigure}
-
 \begin{myfigure}[h!]{fig:sketch:kb-note-for-viewers}
     \messages{0.8\linewidth}{
         \lmessage{
@@ -205,11 +174,319 @@
             nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.%
         }
         \withbuttons\lbuttons{
-            \button{0.25\messagewidth}{\textbf{Назад}}
-            \button{0.65\messagewidth}{\textbf{В главное меню}}
+            \button{0.25\messagewidth}{Назад}
+            \button{0.65\messagewidth}{В главное меню}
         }
 
         {}
     }
     \caption{Интерфейс просмотра заметки для пользователей без прав на её редактирование.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:kb-note-for-editors}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Тестовая заметка}
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.%
+        }
+        \withbuttons\lbuttons{
+            \button{\messagewidth}{Редактировать}
+        }
+        \withbuttons\lbuttons{
+            \button{\messagewidth}{Переименовать}
+        }
+        \withbuttons\lbuttons{
+            \button{\messagewidth}{Переместить в другой раздел}
+        }
+        \withbuttons\lbuttons{
+            \button{\messagewidth}{Удалить}
+        }
+        \withbuttons\lbuttons{
+            \button{0.25\messagewidth}{Назад}
+            \button{0.65\messagewidth}{В главное меню}
+        }
+
+        {}
+    }
+    \caption{Интерфейс просмотра заметки для пользователей, имеющих право на её редактирование.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:subscriptions}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Подписки на рассылки}
+
+            ~
+
+            \textbf{Новостная рассылка} \\
+            Новости об экологии в Вышке и за её пределами \\
+            \emjcrossmark{} Вы не подписаны \\
+            Подписаться: \fakelink{/sub\_news}
+
+            ~
+
+            \textbf{Сервисные уведомления} \\
+            Уведомления об ошибках и сбоях в работе бота \\
+            \emjcheckmark{} Вы подписаны \\
+            Отписаться: \fakelink{/unsub\_service}%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{В главное меню}}
+
+        \rmessage{\fakelink{/sub\_news}}
+
+        \lmessage{Вы подписались на новостную рассылку}
+
+        {}
+    }
+    \caption{Интерфейс управления подписками на рассылки.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:adminpanel}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Панель администратора}%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Права пользователей}}
+        \withbuttons\lbuttons{\button{\messagewidth}{В главное меню}}
+
+        {}
+    }
+    \caption{Интерфейс панели администратора.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:privs}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Права пользователей}%
+
+            ~
+
+            Легенда: \\
+            \emjpencil{} Редактирование базы знаний \\
+            \emjexclamation{} Получение сервисных уведомлений \\
+            \emjgear{} Администратор
+
+            ~
+
+            \textbf{\fakelink{@user\_aaa}} (Вы):
+                \emjpencil{}\emjexclamation{}\emjgear{}
+                \fakelink{/u\_17h682f060} \\
+            \fakelink{@user\_bbb}:
+                \emjpencil{}
+                \fakelink{/u\_3cf9g1g86f} \\
+            \fakelink{@user\_ccc}:
+                \emjexclamation{}
+                \fakelink{/u\_5695d82869}%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Выдать права другому пользователю}}
+        \withbuttons\lbuttons{\button{\messagewidth}{В панель администратора}}
+        \withbuttons\lbuttons{\button{\messagewidth}{В главное меню}}
+
+        \rmessage{\fakelink{/u\_3cf9g1g86f}}
+
+        \lmessage{
+            Пользователь \fakelink{@user\_bbb}
+
+            ~
+
+            Права: \\
+            \emjpencil{} Редактирование базы знаний%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{
+            \emjpencil{} Запретить редактирование базы знаний%
+        }}
+        \withbuttons\lbuttons{\button{\messagewidth}{
+            \emjexclamation{} Разрешить получение сервисных уведомлений%
+        }}
+        \withbuttons\lbuttons{\button{\messagewidth}{
+            \emjgear{} Сделать администратором%
+        }}
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        {}
+    }
+    \caption{Интерфейс управления правами пользователей.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:privsnew}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            Введите имя или идентификатор пользователя
+            (в формате \texttt{username}, \texttt{@username} или \texttt{id:123456})
+            которому требуется выдать права, либо нажмите <<Назад>> для отмены операции
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{user\_ddd}
+
+        \lmessage{
+            Пользователь \fakelink{@user\_ddd}
+
+            ~
+
+            Права: \\
+            (пусто)
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{
+            \emjpencil{} Разрешить редактирование базы знаний%
+        }}
+        \withbuttons\lbuttons{\button{\messagewidth}{
+            \emjexclamation{} Разрешить получение сервисных уведомлений%
+        }}
+        \withbuttons\lbuttons{\button{\messagewidth}{
+            \emjgear{} Сделать администратором%
+        }}
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        {}
+    }
+    \caption{Интерфейс выдачи прав пользователям не из списка.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:edit-note}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Редактирование заметки <<Тестовая заметка 2>>}
+
+            ~
+
+            Существующие вложения (1 файл) будут сохранены. Для изменения этого
+            поведения нажмите на кнопку <<Не сохранять существующие вложения>>
+
+            ~
+
+            Нажмите <<Назад>> для отмены редактирования%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Не сохранять существующие вложения}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{Новый текст заметки.}
+
+        \lmessage{
+            Заметка <<Тестовая заметка 2>> была успешно отредактирована%
+        }
+
+        {}
+    }
+    \caption{Интерфейс редактирования заметки.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:add-note}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Создание новой заметки}
+
+            Введите название новой заметки%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{Новая заметка}
+
+        \lmessage{
+            Введите текст заметки
+
+            Вы также можете приложить к заметке изображения, видео или файлы (не более 10 штук в сумме)%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{Текст новой заметки.}
+
+        \lmessage{
+            Заметка <<Новая заметка>> была создана%
+        }
+
+        {}
+    }
+    \caption{Интерфейс создания новой заметки.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:rename-note}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Переименование заметки <<Тестовая заметка 3>>}
+
+            Введите новое название заметки%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{Тестовая заметка 33}
+
+        \lmessage{
+            Заметка <<Тестовая заметка 3>> была переименована в <<Тестовая заметка 33>>%
+        }
+
+        {}
+    }
+    \caption{Интерфейс переименования заметки.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:move-note}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Перемещение заметки <<Тестовая заметка 4>>}
+
+            Выберите раздел, куда требуется переместить заметку
+
+            ~
+
+            Вы находитесь в корневом разделе
+
+            Подразделы:%
+        }
+        \withbuttons\lbuttons{
+            \button{0.25\messagewidth}{Вверх}
+            \button{0.65\messagewidth}{Отменить перемещение}
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Переместить сюда}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Сбор отходов}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Переработка отходов}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} О боте}}
+
+        {}
+    }
+    \caption{Интерфейс перемещения заметки.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:delete-note}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Удаление заметки <<Тестовая заметка 5>>}
+
+            Внимание! Вы действительно хотите удалить заметку <<Тестовая заметка 5>>
+            из раздела <<Тестовый раздел 1 / Тестовый раздел 1.3>>?
+
+            Все вложения из этой заметки также будут удалены
+        }
+        \withbuttons\lbuttons{
+            \button{0.45\messagewidth}{Да, удалить}
+            \button{0.45\messagewidth}{Нет, не удалять}
+        }
+
+        {}
+    }
+    \caption{Интерфейс подтверждения удаления заметки.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:delete-section}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Удаление раздела <<Тестовый раздел 6>>}
+
+            Внимание! Вы действительно хотите удалить раздел <<Тестовый раздел 6>>
+            из корневого раздела?
+
+            Все заметки и разделы в нём будут также удалены. Кроме того, будут удалены все вложения
+            из удаляемых заметок
+        }
+        \withbuttons\lbuttons{
+            \button{0.45\messagewidth}{Да, удалить}
+            \button{0.45\messagewidth}{Нет, не удалять}
+        }
+
+        {}
+    }
+    \caption{Интерфейс подтверждения удаления раздела.}
 \end{myfigure}

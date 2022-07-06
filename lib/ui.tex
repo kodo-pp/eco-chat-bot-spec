@@ -5,24 +5,35 @@
 \definecolor{inlinebuttonbg}{HTML}{4C92BF}
 \newcommand{\fakelink}[1]{\textcolor{fakelink}{#1}}
 
-\newcommand{\emjfolder}{\includegraphics[width=1em]{images/emoji/folder.png}}
-\newcommand{\emjnote}{\includegraphics[width=1em]{images/emoji/notepad.png}}
-
 \newlength{\messagewidth}
 \newlength{\messagespace}
 \setlength{\messagewidth}{14em}
 \setlength{\messagespace}{15em}
 
-\newcommand{\lmessage}[1]{\colorlet{messagebg}{lmessagebg}\xmessage{#1}\hspace{\messagespace}}
-\newcommand{\rmessage}[1]{\hspace{\messagespace}\colorlet{messagebg}{rmessagebg}\xmessage{#1}}
+\newcommand{\lmessage}[1]{{%
+    \providecommand{\messagespacebefore}{0}%
+    \colorlet{messagebg}{lmessagebg}%
+    \xmessage{#1}%
+}}
+\newcommand{\rmessage}[1]{{
+    \providecommand{\messagespacebefore}{1}%
+    \colorlet{messagebg}{rmessagebg}%
+    \xmessage{#1}%
+}}
 \newcommand{\xmessage}[1]{{
     \vspace{2mm}
+    \if\messagespacebefore1%
+        \hspace{\messagespace}%
+    \fi%
     \setlength\hsize{\messagewidth}
     \newbox\msg
     \setbox\msg=\vbox{\raggedright#1\strut}
     \begin{tikzpicture}
         \node[fill=messagebg, rounded corners] {\box\msg};
     \end{tikzpicture}
+    \if\messagespacebefore0%
+        \hspace{\messagespace}%
+    \fi%
 }}
 \newcommand{\button}[2]{
     \begin{tikzpicture}

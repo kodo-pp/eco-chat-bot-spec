@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
+\usepackage{caption}
 \usepackage[a4paper, hmargin={2cm, 2cm}, vmargin={2cm, 2cm}]{geometry}
 \usepackage{enumitem}
 \usepackage{fontspec}
@@ -8,6 +9,7 @@
 \usepackage{hyphenat}
 \usepackage{lipsum}
 \usepackage[nopagecolor=white, pagecolor=white]{pagecolor}
+\usepackage{pifont}
 \usepackage{polyglossia}
 \usepackage{setspace}
 \usepackage{tabularx}
@@ -19,7 +21,7 @@
 \setmainfont{CMU Serif}
 \setsansfont{Calibri}
 \newfontfamily{\cyrillicfonttt}{Courier New}
-\onehalfspace
+\onehalfspacing
 \hypersetup{
     bookmarks,
     colorlinks=true,
@@ -31,6 +33,8 @@
 \newcommand{\isDraft}{1}
 \title{\myTitle}
 \author{}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
 
 \newcommand{\sectionBreaksNone}{\relax}
 \newcommand{\sectionBreaksTerse}{\vspace{1cm}}
@@ -52,7 +56,6 @@
         \makeatother
         \begin{figure}[#1]
             \centering
-            \label{#2@anchor}
     }{
             \makeatletter
             \expandafter\label{\myfigure@ref}
@@ -61,6 +64,8 @@
         \endgroup
     }
 
+\input{lib/emoji.tex}
+\input{lib/placeholder.tex}
 \input{lib/ui.tex}
 
 \begin{document}
