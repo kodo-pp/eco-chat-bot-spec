@@ -30,18 +30,55 @@
         \begin{figure}[h]
             \centering
             \begingroup
-            \newcommand{\name}{\rmfamily\,}
-            \begin{tabular}{>{\ttfamily}l}
-                \name Корневой раздел \\
-                +---\name Раздел «Экология в Вышке» \\
-                |~~~+---\name Раздел «Переработка отходов» \\
-                |~~~|~~~+---\name Заметка «Раздельный сбор мусора» \\
-                |~~~|~~~+---\name Заметка «Места сбора батареек» \\
-                |~~~+---\name Заметка «Планы развития» \\
-                +---\name Раздел «О боте» \\
-                |~~~+---\name Заметка «Справка» \\
-                +---\name Заметка «Основная информация» \\
-            \end{tabular}
+            %\newcommand{\name}{\rmfamily\,}
+            %\begin{tabular}{>{\ttfamily}l}
+            %    \name Корневой раздел \\
+            %    +---\name Раздел «Экология в Вышке» \\
+            %    |~~~+---\name Раздел «Сбор отходов» \\
+            %    |~~~|~~~+---\name Заметка «Раздельный сбор мусора» \\
+            %    |~~~|~~~+---\name Заметка «Места сбора батареек» \\
+            %    |~~~+---\name Заметка «Планы развития» \\
+            %    +---\name Раздел «О боте» \\
+            %    |~~~+---\name Заметка «Справка» \\
+            %    +---\name Заметка «Основная информация» \\
+            %\end{tabular}
+            \newlength{\treeindent}
+            \newlength{\treeskip}
+            \setlength{\treeindent}{2em}
+            \setlength{\treeskip}{-3ex}
+            \newcounter{treeline}
+            \setcounter{treeline}0
+            \newcommand{\mypoint}[2]{(#2 * \treeindent, #1 * \treeskip)}
+            \newcommand{\outpoint}[2]{(#2 * \treeindent + 0.75em, #1 * \treeskip - 1.5ex)}
+            \newcommand{\midpoint}[2]{(#2 * \treeindent + 0.75em, #1 * \treeskip)}
+            \newcommand{\inpoint}[2]{(#2 * \treeindent - 0.1em, #1 * \treeskip)}
+            \newcommand{\mynode}[2]{
+                \node at \mypoint{\thetreeline}{#1} [anchor = west] {#2};%
+                \stepcounter{treeline}%
+            }
+            \begin{tikzpicture}
+                \mynode 0 {\emjfolder{} Корневой раздел};
+                    \mynode 1 {\emjfolder{} Раздел <<Экология в Вышке>>};
+                        \mynode 2 {\emjfolder{} Раздел <<Сбор отходов>>};
+                            \mynode 3 {\emjnote{} Заметка <<Раздельный сбор мусора>>};
+                            \mynode 3 {\emjnote{} Заметка <<Места сбора батареек>>};
+                        \mynode 2 {\emjnote{} Заметка <<Планы развития>>};
+                    \mynode 1 {\emjfolder{} Раздел <<О боте>>};
+                        \mynode 2 {\emjnote{} Заметка <<Справка>>};
+                    \mynode 1 {\emjnote{} Заметка <<Основная информация>>};
+                \draw \outpoint00 -- \midpoint80;
+                    \draw \midpoint10 -- \inpoint11;
+                    \draw \midpoint60 -- \inpoint61;
+                    \draw \midpoint80 -- \inpoint81;
+                \draw \outpoint11 -- \midpoint51;
+                    \draw \midpoint21 -- \inpoint22;
+                    \draw \midpoint51 -- \inpoint52;
+                \draw \outpoint22 -- \midpoint42;
+                    \draw \midpoint32 -- \inpoint33;
+                    \draw \midpoint42 -- \inpoint43;
+                \draw \outpoint61 -- \midpoint71;
+                    \draw \midpoint71 -- \inpoint72;
+            \end{tikzpicture}
             \endgroup
             \caption{Пример дерева разделов.}
             \label{fig:req:fn:kb:tree}

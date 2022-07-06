@@ -1,0 +1,45 @@
+\definecolor{lmessagebg}{HTML}{FFFFFF}
+\definecolor{rmessagebg}{HTML}{DEF1FD}
+\definecolor{uibg}{HTML}{74B5E0}
+\definecolor{fakelink}{HTML}{168DCD}
+\definecolor{inlinebuttonbg}{HTML}{4C92BF}
+\newcommand{\fakelink}[1]{\textcolor{fakelink}{#1}}
+
+\newcommand{\emjfolder}{\includegraphics[width=1em]{images/emoji/folder.png}}
+\newcommand{\emjnote}{\includegraphics[width=1em]{images/emoji/notepad.png}}
+
+\newlength{\messagewidth}
+\newlength{\messagespace}
+\setlength{\messagewidth}{14em}
+\setlength{\messagespace}{15em}
+
+\newcommand{\lmessage}[1]{\colorlet{messagebg}{lmessagebg}\xmessage{#1}\hspace{\messagespace}}
+\newcommand{\rmessage}[1]{\hspace{\messagespace}\colorlet{messagebg}{rmessagebg}\xmessage{#1}}
+\newcommand{\xmessage}[1]{{
+    \vspace{2mm}
+    \setlength\hsize{\messagewidth}
+    \newbox\msg
+    \setbox\msg=\vbox{\raggedright#1\strut}
+    \begin{tikzpicture}
+        \node[fill=messagebg, rounded corners] {\box\msg};
+    \end{tikzpicture}
+}}
+\newcommand{\button}[2]{
+    \begin{tikzpicture}
+        \node[fill=inlinebuttonbg, rounded corners] {\makebox[#1]{\textcolor{white}{\strut#2}}};
+    \end{tikzpicture}
+}
+\newcommand{\messages}[2]{
+    \colorbox{uibg}{{
+        \begin{minipage}{#1}
+            \vspace{3mm}
+            \centering
+            \setlength{\parindent}{0pt}
+            \sffamily\footnotesize #2
+            \vspace{5mm}
+        \end{minipage}
+    }}
+}
+\newcommand{\lbuttons}[1]{\makebox[\messagewidth]{\raggedright #1}\hspace{\messagespace}}
+\newcommand{\rbuttons}[1]{\hspace{\messagespace}\makebox[\messagewidth]{\raggedright #1}}
+\newcommand{\withbuttons}{\par\vspace{0.5mm}}

@@ -1,20 +1,23 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
-%\usepackage[russian]{babel}
+\usepackage[a4paper, hmargin={2cm, 2cm}, vmargin={2cm, 2cm}]{geometry}
 \usepackage{enumitem}
 \usepackage{fontspec}
-\usepackage[a4paper, hmargin={2cm, 2cm}, vmargin={2cm, 2cm}]{geometry}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{hyphenat}
 \usepackage{lipsum}
+\usepackage[nopagecolor=white, pagecolor=white]{pagecolor}
 \usepackage{polyglossia}
 \usepackage{setspace}
 \usepackage{tabularx}
+\usepackage{tikz}
 \usepackage[normalem]{ulem}
 \usepackage{xcolor}
 
 \setmainlanguage{russian}
 \setmainfont{CMU Serif}
+\setsansfont{Calibri}
 \newfontfamily{\cyrillicfonttt}{Courier New}
 \onehalfspace
 \hypersetup{
@@ -41,6 +44,24 @@
 
 \newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO}}: #1}
 \newcommand{\inlinetodo}[1]{(\emph{\textcolor{red}{\textbf{TODO}}: #1})}
+\newenvironment{myfigure}[2][h]
+    {
+        \begingroup
+        \makeatletter
+        \def\myfigure@ref{#2}
+        \makeatother
+        \begin{figure}[#1]
+            \centering
+            \label{#2@anchor}
+    }{
+            \makeatletter
+            \expandafter\label{\myfigure@ref}
+            \makeatother
+        \end{figure}
+        \endgroup
+    }
+
+\input{lib/ui.tex}
 
 \begin{document}
 
@@ -54,5 +75,6 @@
 \input{src/req.tex}
 \input{src/doc.tex}
 \input{src/test.tex}
+\input{src/ui-sketches.tex}
 
 \end{document}

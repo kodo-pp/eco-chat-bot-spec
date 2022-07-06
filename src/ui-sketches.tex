@@ -1,0 +1,215 @@
+\section{Приблизительные макеты экранов интерфейса}
+
+\begin{myfigure}[h!]{fig:sketch:init}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            Вас приветствует HSE EcoBot!
+
+            Для начала работы нажмите кнопку <<Начать>>
+        }
+        \withbuttons
+        \lbuttons{\button{\messagewidth}{Начать}}
+
+        {}
+    }
+    \caption{Интерфейс в изначальном состоянии.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:mainmenu}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{База знаний}
+
+            Коллекция статей и заметок, написанных нами специально для бота%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Сортировка отходов}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Переработка отходов}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} О боте}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\textbf{Все статьи}}}
+
+        \lmessage{
+            \textbf{Ресурсы}
+
+            Интеграция с важными ресурсами, собранными здесь%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Зелёная вышка}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Индекс качества воздуха}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Календарь событий}}
+
+        \lmessage{
+            \textbf{Действия с ботом}
+
+            Настройки и служебные действия%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Управление рассылками}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Обратная связь}}
+
+        {}
+    }
+    \caption{Интерфейс главного меню для обычных пользователей.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:mainmenu-for-admins}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{База знаний}
+
+            Коллекция статей и заметок, написанных нами специально для бота%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Сортировка отходов}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Переработка отходов}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} О боте}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\textbf{Все статьи}}}
+
+        \lmessage{
+            \textbf{Ресурсы}
+
+            Интеграция с важными ресурсами, собранными здесь%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Зелёная вышка}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Индекс качества воздуха}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Календарь событий}}
+
+        \lmessage{
+            \textbf{Действия с ботом}
+
+            Настройки и служебные действия%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Панель администратора}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Управление рассылками}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Обратная связь}}
+
+        {}
+    }
+    \caption{Интерфейс главного меню для обычных пользователей с правами администратора.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:kb-navigation-for-viewers}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{База знаний}
+
+            Вы находитесь в разделе <<Сортировка отходов>>
+
+            Подразделы и заметки:%
+        }
+        \withbuttons\lbuttons{
+            \button{0.25\messagewidth}{\textbf{Вверх}}
+            \button{0.65\messagewidth}{\textbf{В главное меню}}
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Карта сбора --- ВШЭ}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Карта сбора --- Москва и МО}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Инструкция по сортировке}}
+
+        {}
+    }
+    \caption{Интерфейс навигации по разделу базы знаний для обычных пользователей.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:kb-navigation-for-editors}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{База знаний}
+
+            Вы находитесь в разделе <<Сортировка отходов>>
+
+            Подразделы и заметки:%
+        }
+        \withbuttons\lbuttons{
+            \button{0.25\messagewidth}{\textbf{Вверх}}
+            \button{0.65\messagewidth}{\textbf{В главное меню}}
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{\textbf{Редактировать этот раздел}}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Карта сбора --- ВШЭ}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Карта сбора --- Москва и МО}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Инструкция по сортировке}}
+
+        {}
+    }
+    \caption{Интерфейс навигации по разделу базы знаний для пользователей с правом её редактирования.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:kb-pagination}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{База знаний}
+
+            Вы находитесь в разделе <<Тестовый раздел / Вложенный раздел>>
+
+            Подразделы и заметки (показаны 50--59 из 100):%
+        }
+        \withbuttons\lbuttons{
+            \button{0.25\messagewidth}{\textbf{Вверх}}
+            \button{0.65\messagewidth}{\textbf{В главное меню}}
+        }
+        \withbuttons\lbuttons{
+            \button{1em}{\(\ll\)}
+            \button{1em}{\(<\)}
+            \button{1em}{\(>\)}
+            \button{1em}{\(\gg\)}
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 50}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 51}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 52}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 53}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 54}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 55}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 56}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 57}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 58}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjnote{} Заметка 59}}
+
+        {}
+    }
+    \caption{Интерфейс навигации по разделу базы знаний с разбиением выдачи на страницы.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:kb-note-for-editors}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Тестовая заметка}
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.%
+        }
+        \withbuttons\lbuttons{
+            \button{\messagewidth}{\textbf{Редактировать}}
+        }
+        \withbuttons\lbuttons{
+            \button{\messagewidth}{\textbf{Переименовать}}
+        }
+        \withbuttons\lbuttons{
+            \button{\messagewidth}{\textbf{Переместить в другой раздел}}
+        }
+        \withbuttons\lbuttons{
+            \button{\messagewidth}{\textbf{Удалить}}
+        }
+        \withbuttons\lbuttons{
+            \button{0.25\messagewidth}{\textbf{Назад}}
+            \button{0.65\messagewidth}{\textbf{В главное меню}}
+        }
+
+        {}
+    }
+    \caption{Интерфейс просмотра заметки для пользователей, имеющих право на её редактирование.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:kb-note-for-viewers}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Тестовая заметка}
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.%
+        }
+        \withbuttons\lbuttons{
+            \button{0.25\messagewidth}{\textbf{Назад}}
+            \button{0.65\messagewidth}{\textbf{В главное меню}}
+        }
+
+        {}
+    }
+    \caption{Интерфейс просмотра заметки для пользователей без прав на её редактирование.}
+\end{myfigure}
