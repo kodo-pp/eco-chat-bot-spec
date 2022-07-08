@@ -26,6 +26,7 @@
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Переработка отходов}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} О боте}}
         \withbuttons\lbuttons{\button{\messagewidth}{Все статьи}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Архив рассылок}}
 
         \lmessage{
             \textbf{Ресурсы}
@@ -43,6 +44,7 @@
         }
         \withbuttons\lbuttons{\button{\messagewidth}{Управление рассылками}}
         \withbuttons\lbuttons{\button{\messagewidth}{Обратная связь}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Предложить экологическую инициативу}}
 
         {}
     }
@@ -60,6 +62,7 @@
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Переработка отходов}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} О боте}}
         \withbuttons\lbuttons{\button{\messagewidth}{Все статьи}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Архив рассылок}}
 
         \lmessage{
             \textbf{Ресурсы}
@@ -78,10 +81,11 @@
         \withbuttons\lbuttons{\button{\messagewidth}{Панель администратора}}
         \withbuttons\lbuttons{\button{\messagewidth}{Управление рассылками}}
         \withbuttons\lbuttons{\button{\messagewidth}{Обратная связь}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Предложить экологическую инициативу}}
 
         {}
     }
-    \caption{Интерфейс главного меню для обычных пользователей с правами администратора.}
+    \caption{Интерфейс главного меню для пользователей с правами администратора.}
 \end{myfigure}
 
 \begin{myfigure}[h!]{fig:sketch:kb-navigation-for-viewers}
@@ -127,6 +131,28 @@
         {}
     }
     \caption{Интерфейс навигации по разделу базы знаний для пользователей с правом её редактирования.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:edit-section}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Редактирование раздела <<Сортировка отходов>>}
+
+            Раздел содержит 3 заметки
+
+            Раздел закреплён в главном меню%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Создать заметку}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Создать подраздел}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Переименовать}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Переместить в другой раздел}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Удалить}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Открепить из главного меню}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        {}
+    }
+    \caption{Интерфейс редактирования раздела.}
 \end{myfigure}
 
 \begin{myfigure}[h!]{fig:sketch:kb-pagination}
@@ -205,6 +231,9 @@
             \button{\messagewidth}{Удалить}
         }
         \withbuttons\lbuttons{
+            \button{\messagewidth}{Закрепить в главном меню}
+        }
+        \withbuttons\lbuttons{
             \button{0.25\messagewidth}{Назад}
             \button{0.65\messagewidth}{В главное меню}
         }
@@ -228,6 +257,13 @@
 
             ~
 
+            \textbf{Обратная связь} \\
+            Пожелания и замечания от пользователей бота \\
+            \emjcheckmark{} Вы подписаны \\
+            Отписаться: \fakelink{/unsub\_feedback}%
+
+            ~
+
             \textbf{Сервисные уведомления} \\
             Уведомления об ошибках и сбоях в работе бота \\
             \emjcheckmark{} Вы подписаны \\
@@ -247,7 +283,9 @@
 \begin{myfigure}[h!]{fig:sketch:adminpanel}
     \messages{0.8\linewidth}{
         \lmessage{
-            \textbf{Панель администратора}%
+            \textbf{Панель администратора}
+
+            Здесь вы можете настроить права пользователей бота%
         }
         \withbuttons\lbuttons{\button{\messagewidth}{Права пользователей}}
         \withbuttons\lbuttons{\button{\messagewidth}{В главное меню}}
@@ -262,23 +300,22 @@
         \lmessage{
             \textbf{Права пользователей}%
 
-            ~
-
             Легенда: \\
             \emjpencil{} Редактирование базы знаний \\
             \emjexclamation{} Получение сервисных уведомлений \\
+            \emjspeech{} Получение обратной связи \\
             \emjgear{} Администратор
 
             ~
 
             \textbf{\fakelink{@user\_aaa}} (Вы):
-                \emjpencil{}\emjexclamation{}\emjgear{}
+                \emjpencil{}\emjexclamation{}\emjspeech{}\emjgear{}
                 \fakelink{/u\_17h682f060} \\
             \fakelink{@user\_bbb}:
                 \emjpencil{}
                 \fakelink{/u\_3cf9g1g86f} \\
             \fakelink{@user\_ccc}:
-                \emjexclamation{}
+                \emjexclamation{}\emjspeech{}
                 \fakelink{/u\_5695d82869}%
         }
         \withbuttons\lbuttons{\button{\messagewidth}{Выдать права другому пользователю}}
@@ -288,7 +325,7 @@
         \rmessage{\fakelink{/u\_3cf9g1g86f}}
 
         \lmessage{
-            Пользователь \fakelink{@user\_bbb}
+            \textbf{Пользователь \fakelink{@user\_bbb}}
 
             ~
 
@@ -300,6 +337,9 @@
         }}
         \withbuttons\lbuttons{\button{\messagewidth}{
             \emjexclamation{} Разрешить получение сервисных уведомлений%
+        }}
+        \withbuttons\lbuttons{\button{\messagewidth}{
+            \emjspeech{} Разрешить получение обратной связи%
         }}
         \withbuttons\lbuttons{\button{\messagewidth}{
             \emjgear{} Сделать администратором%
@@ -315,7 +355,7 @@
     \messages{0.8\linewidth}{
         \lmessage{
             Введите имя или идентификатор пользователя
-            (в формате \texttt{username}, \texttt{@username} или \texttt{id:123456})
+            (в формате \texttt{username}, \texttt{@username} или \texttt{id:123456}),
             которому требуется выдать права, либо нажмите <<Назад>> для отмены операции
         }
         \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
@@ -323,7 +363,7 @@
         \rmessage{user\_ddd}
 
         \lmessage{
-            Пользователь \fakelink{@user\_ddd}
+            \textbf{Пользователь \fakelink{@user\_ddd}}
 
             ~
 
@@ -335,6 +375,9 @@
         }}
         \withbuttons\lbuttons{\button{\messagewidth}{
             \emjexclamation{} Разрешить получение сервисных уведомлений%
+        }}
+        \withbuttons\lbuttons{\button{\messagewidth}{
+            \emjspeech{} Разрешить получение обратной связи%
         }}
         \withbuttons\lbuttons{\button{\messagewidth}{
             \emjgear{} Сделать администратором%
@@ -489,4 +532,46 @@
         {}
     }
     \caption{Интерфейс подтверждения удаления раздела.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:feedback}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Обратная связь}
+
+            Здесь вы можете оставить свои пожелания и замечания по нашей работе и по работе бота.
+            Также вы можете связаться с нами по email: \fakelink{example@example.com}
+
+            ~
+
+            Выберите тему обратной связи:%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Зелёная вышка}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Чат-бот}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Предложить экологическую инициативу}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Другое}}
+        \withbuttons\lbuttons{\button{\messagewidth}{В главное меню}}
+
+        (выбран вариант <<Другое>>)
+
+        \lmessage{
+            \textbf{Обратная связь --- другое}
+
+            Напишите свои пожелания или замечания в сообщении. Вы также можете
+            прикрепить изображения, видео или файлы%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Выбрать другую тему}}
+        \withbuttons\lbuttons{\button{\messagewidth}{В главное меню}}
+
+        \rmessage{
+            Тестовое сообщение%
+        }
+
+        \lmessage{
+            Обратная связь отправлена!%
+        }
+
+        {}
+    }
+    \caption{Интерфейс обратной связи.}
 \end{myfigure}
