@@ -25,23 +25,22 @@
     принадлежности образуют иерархическую структуру --- дерево разделов. Эта структура напоминает
     дерево файлов и папок в файловой системе. Схематичное изображение примера дерева разделов
     показано на рис.~\ref{fig:req:fn:kb:tree}.
+    \newlength{\treeindent}
+    \newlength{\treeskip}
+    \setlength{\treeindent}{2em}
+    \setlength{\treeskip}{-3ex}
+    \newcounter{treeline}
+    \setcounter{treeline}0
+    \newcommand{\mypoint}[2]{(#2 * \treeindent, #1 * \treeskip)}
+    \newcommand{\outpoint}[2]{(#2 * \treeindent + 0.75em, #1 * \treeskip - 1.5ex)}
+    \newcommand{\midpoint}[2]{(#2 * \treeindent + 0.75em, #1 * \treeskip)}
+    \newcommand{\inpoint}[2]{(#2 * \treeindent - 0.1em, #1 * \treeskip)}
+    \newcommand{\mynode}[2]{
+        \node at \mypoint{\thetreeline}{#1} [anchor = west] {#2};%
+        \stepcounter{treeline}%
+    }
     \begin{figure}[h]
         \centering
-        \begingroup
-        \newlength{\treeindent}
-        \newlength{\treeskip}
-        \setlength{\treeindent}{2em}
-        \setlength{\treeskip}{-3ex}
-        \newcounter{treeline}
-        \setcounter{treeline}0
-        \newcommand{\mypoint}[2]{(#2 * \treeindent, #1 * \treeskip)}
-        \newcommand{\outpoint}[2]{(#2 * \treeindent + 0.75em, #1 * \treeskip - 1.5ex)}
-        \newcommand{\midpoint}[2]{(#2 * \treeindent + 0.75em, #1 * \treeskip)}
-        \newcommand{\inpoint}[2]{(#2 * \treeindent - 0.1em, #1 * \treeskip)}
-        \newcommand{\mynode}[2]{
-            \node at \mypoint{\thetreeline}{#1} [anchor = west] {#2};%
-            \stepcounter{treeline}%
-        }
         \begin{tikzpicture}
             \mynode 0 {\emjfolder{} Корневой раздел}
                 \mynode 1 {\emjfolder{} Раздел <<Экология в Вышке>>}
@@ -65,7 +64,6 @@
             \draw \outpoint61 -- \midpoint71;
                 \draw \midpoint71 -- \inpoint72;
         \end{tikzpicture}
-        \endgroup
         \caption{Пример дерева разделов.}
         \label{fig:req:fn:kb:tree}
     \end{figure}

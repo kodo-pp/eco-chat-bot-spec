@@ -1,2 +1,63 @@
 \subsection{Требования к содержимому базы знаний}
-\todo{Содержимое разделов}
+При развёртывании бота на предоставленном Заказчиком сервере
+необходимо обеспечить наполнение его базы знаний согласно схеме, приведённой на рис.~\ref{fig:req:content:tree}.
+Допускается также создавать дополнительные разделы и заметки, если они будут релевантны.
+
+\begin{figure}[h!]
+    \centering
+    \setcounter{treeline}0
+    \begin{tikzpicture}
+        \mynode 0 {\emjfolder{} Корневой раздел}
+            \mynode 1 {\emjfolder{} Сортировка отходов}
+                \mynode 2 {\emjfolder{} Карта сбора отходов ВШЭ}
+                    \mynode 3 {\emjnote{} Карта сбора отходов в НИУ ВШЭ}
+                \mynode 2 {\emjfolder{} Карта сбора отходов в Москве и МО}
+                    \mynode 3 {\emjnote{} Карта сбора отходов в Москве и МО}
+                \mynode 2 {\emjfolder{} Инструкции по сортировке}
+                    \mynode 3 {\emjnote{} Пластик}
+                    \mynode 3 {\emjnote{} Стекло}
+                    \mynode 3 {\emjnote{} Бумага}
+                    \mynode 3 {\emjnote{} Металл}
+                    \mynode 3 {\emjnote{} Батарейки}
+                \mynode 2 {\emjfolder{} Чек-листы}
+                    \mynode 3 {\emjnote{}}
+                    \mynode 3 {\emjnote{}}
+                    \mynode 3 {\emjnote{}}
+            \mynode 1 {\emjfolder{} Переработка отходов}
+                \mynode 2 {\emjfolder{} Технологии и методы переработки}
+                    \mynode 3 {\emjnote{} Технологии и методы переработки}
+                \mynode 2 {\emjfolder{} Переработка отходов в Москве}
+                    \mynode 3 {\emjnote{} Переработка отходов в Москве}
+                \mynode 2 {\emjfolder{} Виды переработки}
+                    \mynode 3 {\emjnote{}}
+                    \mynode 3 {\emjnote{}}
+                    \mynode 3 {\emjnote{}}
+                \mynode 2 {\emjfolder{} Заводы}
+                    \mynode 3 {\emjnote{} Заводы}
+            \mynode 1 {\emjfolder{} Углеродный след}
+                \mynode 2 {\emjnote{} Об углеродном следе}
+                \mynode 2 {\emjnote{} Как уменьшить свой углеродный след}
+                \mynode 2 {\emjnote{} Калькулятор углеродного следа}
+            \mynode 1 {\emjfolder{} Зелёная вышка}
+                \mynode 2 {\emjnote{} О Зелёной вышке}
+                \mynode 2 {\emjnote{} Страница Зелёной вышки}
+                \mynode 2 {\emjnote{} Хочу стать волонтёром}
+            \mynode 1 {\emjfolder{} Индекс качества воздуха}
+                \mynode 2 {\emjnote{} Индекс качества воздуха в Москве}
+                \mynode 2 {\emjnote{} Страница AccuWeather}
+        %\draw \outpoint00 -- \midpoint80;
+        %    \draw \midpoint10 -- \inpoint11;
+        %    \draw \midpoint60 -- \inpoint61;
+        %    \draw \midpoint80 -- \inpoint81;
+        %\draw \outpoint11 -- \midpoint51;
+        %    \draw \midpoint21 -- \inpoint22;
+        %    \draw \midpoint51 -- \inpoint52;
+        %\draw \outpoint22 -- \midpoint42;
+        %    \draw \midpoint32 -- \inpoint33;
+        %    \draw \midpoint42 -- \inpoint43;
+        %\draw \outpoint61 -- \midpoint71;
+        %    \draw \midpoint71 -- \inpoint72;
+    \end{tikzpicture}
+    \caption{Схема требуемого дерева разделов.}
+    \label{fig:req:content:tree}
+\end{figure}

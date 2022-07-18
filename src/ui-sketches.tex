@@ -24,17 +24,15 @@
         }
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Сортировка отходов}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Переработка отходов}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Зелёная вышка}}
+        \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} Индекс качества воздуха}}
         \withbuttons\lbuttons{\button{\messagewidth}{\emjfolder{} О боте}}
         \withbuttons\lbuttons{\button{\messagewidth}{Все статьи}}
         \withbuttons\lbuttons{\button{\messagewidth}{Архив рассылок}}
 
         \lmessage{
-            \textbf{Ресурсы}
-
-            Интеграция с важными ресурсами, собранными здесь%
+            \textbf{Полезные ресурсы}%
         }
-        \withbuttons\lbuttons{\button{\messagewidth}{Зелёная вышка}}
-        \withbuttons\lbuttons{\button{\messagewidth}{Индекс качества воздуха}}
         \withbuttons\lbuttons{\button{\messagewidth}{Календарь событий}}
 
         \lmessage{
@@ -594,4 +592,168 @@
         {}
     }
     \caption{Интерфейс обратной связи.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:calendar}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Календарь событий}
+
+            Нажмите на ссылку возле события, чтобы просмотреть подробности.
+
+            ~
+
+            1 августа 17:00 --- Тестовое событие 1. \fakelink{/e\_11111}
+            
+            ~
+
+            12 августа --- Тестовое событие 2. \fakelink{/e\_22222}%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Добавить событие}}
+        \withbuttons\lbuttons{\button{\messagewidth}{В главное меню}}
+
+        {}
+    }
+    \caption{Интерфейс календаря событий.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:event}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Тестовое событие 1.}
+
+            Описание тестового события 1.
+
+            \textbf{Дата и время}: 1 августа 17:00.
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Переименовать}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Редактировать описание}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Изменить дату и время}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Удалить}}
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+        \withbuttons\lbuttons{\button{\messagewidth}{В главное меню}}
+
+        {}
+    }
+    \caption{Интерфейс просмотра события.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:delete-event}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Удаление события}
+
+            Вы действительно хотите удалить событие <<Тестовое событие 1>> (1 августа 17:00)?%
+        }
+        \withbuttons\lbuttons{
+            \button{0.45\messagewidth}{Да, удалить}
+        }
+        \withbuttons\lbuttons{
+            \button{0.45\messagewidth}{Нет, не удалять}
+        }
+
+        {}
+    }
+    \caption{Интерфейс удаления события.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:edit-event-desc}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Редактирование описания события}
+            Введите новое описание для события <<Тестовое событие 1>>%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{Описание 2}
+
+        \lmessage{
+            Описание события <<Тестовое событие 1>> успешно изменено%
+        }
+
+        {}
+    }
+    \caption{Интерфейс редактирования описания события.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:rename-event}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Переименование события}
+            Введите новое имя для события <<Тестовое событие 1>>%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{Событие 3}
+
+        \lmessage{
+            Событие <<Тестовое событие 1>> успешно переименовано в <<Событие 3>>%
+        }
+
+        {}
+    }
+    \caption{Интерфейс переименования события.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:edit-event-date}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Редактирование даты и времени события}
+            Введите новую дату и время для события <<Тестовое событие 1>> в формате
+            \texttt{ГГГГ-ММ-ДД} или \texttt{ГГГГ-ММ-ДД ЧЧ:ММ}
+
+            ~
+
+            Текущая дата события: \texttt{2022-08-01 17:00}%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{2022-08-08 14:30}
+
+        \lmessage{
+            Дата и время события <<Тестовое событие 1>> успешно изменены на 8 августа 14:30%
+        }
+
+        {}
+    }
+    \caption{Интерфейс изменение даты события.}
+\end{myfigure}
+
+\begin{myfigure}[h!]{fig:sketch:add-event}
+    \messages{0.8\linewidth}{
+        \lmessage{
+            \textbf{Создание события}
+
+            Введите название события
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{Тестовое событие 4}
+        
+        \lmessage{
+            Введите описание события
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{Описание тестового события 4.}
+
+        \lmessage{
+            Введите дату и время события в формате
+            \texttt{ГГГГ-ММ-ДД} или \texttt{ГГГГ-ММ-ДД ЧЧ:ММ}
+
+            ~
+
+            Дата и время сейчас: \texttt{2022-07-18 15:47}%
+        }
+        \withbuttons\lbuttons{\button{\messagewidth}{Назад}}
+
+        \rmessage{2022-09-01 9:00}
+
+        \lmessage{
+            Событие <<Тестовое событие 4>> было успешно создано%
+        }
+
+        {}
+    }
+    \caption{Интерфейс создания события.}
 \end{myfigure}
